@@ -8,7 +8,7 @@ function average(numbers) {
       
     if(isNaN(numbers[i]))
     {
-      continue;
+      result = result + 0;
     }
     else
     {
