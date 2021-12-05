@@ -1,15 +1,22 @@
 
 function average(numbers) {
   
+  let result = 0;
+  
   for (let i = 0; i<numbers.length; i++)
   {
+      
     if(isNaN(numbers[i]))
     {
-      numbers[i] = 0;
+      continue;
+    }
+    else
+    {
+      result = result + numbers[i];
     }
   }
     
-  return numbers.reduce((p, c)=> p + c, 0) / numbers.length;
+  return (result/numbers.length);
 }
 
 module.exports = {average};
