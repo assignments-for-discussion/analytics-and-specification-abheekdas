@@ -3,7 +3,7 @@ function average(numbers) {
   
   for (let i = 0; i<numbers.length; i++)
   {
-    if(isNan(numbers[i]))
+    if(isNaN(numbers[i]))
     {
       numbers[i] = 0;
     }
