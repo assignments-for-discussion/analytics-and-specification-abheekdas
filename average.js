@@ -4,9 +4,12 @@ function average(numbers) {
     
     numbers.forEach((number) => isNaN(number) ? countNan+=1 : result+=number);
     
-    if(countNan >= Math.floor(0.25*numbers.length)) // If 25% or more than 25% data is missing then we indicate sensor is malfunctioned.
+    // Sensor Malfunction check!
+    if(countNan >= Math.floor(0.25*numbers.length)){
         return NaN;
-    else
+    }
+    else{
         return result / (numbers.length - countNan)
+    }
 }
 module.exports = {average};
