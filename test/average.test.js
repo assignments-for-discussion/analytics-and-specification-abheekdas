@@ -16,7 +16,7 @@ it('ignores NaN in the input', ()=> {
 });
 
 it('Reports the average as NaN, if sensor is malfunctioned', () => {
-  // Sensor is malfunctioned when 30% data or more,
-  // is missing
-  expect(average([1,2,3,4,5,6,7,NaN,NaN,NaN])).to.be.NaN;
+  // Sensor is malfunctioned when more than 30%,
+  // data is missing
+  expect(average([1,2,3,4,5,NaN,NaN,NaN,NaN])).to.be.NaN;
 });
